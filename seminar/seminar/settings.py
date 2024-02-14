@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'zadacha5',
     's2z1',
     'blog',
+    's3',
 ]
 
 MIDDLEWARE = [
