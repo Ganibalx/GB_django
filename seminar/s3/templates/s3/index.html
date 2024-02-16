@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr)">
+        <div style="padding: 5px; border: 1px solid black">Номер попытки</div>
+        <div style="padding: 5px; border: 1px solid black">Результат</div>
+        {% for id, res in result.items %}
+            <div style="padding: 5px; border: 1px solid black">{{ id }}</div>
+            <div style="padding: 5px; border: 1px solid black">{{ res }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ object.title }}</title>
+</head>
+<body>
+    <h1>{{ object.title }}</h1>
+    <p style="margin-top: 20px; margin-bottom: 20px">
+        {{ object.content }}
+    </p>
+    <p style="margin-bottom: 20px">
+        {{ object.pub_date }}
+    </p>
+    <h1>Комментарии</h1>
+    {% for com in comments %}
+    <h2>{{ com.author.firstname }}</h2>
+        <div>{{ com.content }}</div>
+        <div>{{ com.create_date }}
+        {% if com.create_date < com.edit_date %}
+            изменено {{ com.edit_date }}
+        {% endif %}
+        </div>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Посты {{ autor }}</title>
+</head>
+<body style="display: flex; align-items: center; flex-direction: column">
+    <h1>Посты {{ autor }}</h1>
+    <div style="display: flex; flex-direction: column">
+        {% for post in posts %}
+            {% if post.publicate %}
+                <div style="border: 1px solid black; border-radius: 5px; margin-bottom: 10px; padding: 5px">
+                    <a href="{% url 'detail_post' post.id %}">{{ post.title }}</a>
+                </div>
+            {% else %}
+                <div style="border: 1px solid black; border-radius: 5px; margin-bottom: 10px; padding: 5px">{{ post.title }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
