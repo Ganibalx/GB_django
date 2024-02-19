@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('zadacha5.urls')),
     path('s2/', include('s2z1.urls')),
     path('s3/', include('s3.urls')),
+    path('s4/', include('s4.urls')),
     path('blog/', include('blog.urls')),
 ]

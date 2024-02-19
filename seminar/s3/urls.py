@@ -3,7 +3,7 @@ from .views import Coin, Dice, Random
 
 
 urlpatterns = [
-    path('coin/<int:n>', Coin.as_view()),
-    path('dice/<int:n>', Dice.as_view()),
-    path('random/<int:n>', Random.as_view()),
+    path('coin/<int:n>', Coin.as_view(), name='coin'),
+    path('dice/<int:n>', Dice.as_view(), name='dice'),
+    path('random/<int:n>', Random.as_view(), name='random'),
 ]

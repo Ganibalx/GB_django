@@ -12,6 +12,11 @@
     <p style="margin-bottom: 20px">
         {{ object.pub_date }}
     </p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <input type="submit" value="Оставить отзыв">
+    </form>
     <h1>Комментарии</h1>
     {% for com in comments %}
     <h2>{{ com.author.firstname }}</h2>

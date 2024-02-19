@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     's2z1',
     'blog',
     's3',
+    's4',
 ]
 
 MIDDLEWARE = [

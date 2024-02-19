@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Client(models.Model):
@@ -14,7 +15,14 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     count = models.IntegerField(default=1)
+    img = models.ImageField(upload_to='products/')
     data_add = models.DateField(auto_now=True)
+
+    def get_desc(self):
+        return self.description[:20]
+
+    def get_absolute_url(self):
+        return reverse("updateproduct", kwargs={"pk": self.pk})
 
 
 class Order(models.Model):
