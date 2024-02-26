@@ -33,5 +33,5 @@ class Comment(models.Model):
     author = models.ForeignKey(Autor, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     content = models.TextField()
-    create_date = models.DateField()
-    edit_date = models.DateField()
+    create_date = models.DateField(auto_now_add=True)
+    edit_date = models.DateField(auto_now=True)
