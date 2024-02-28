@@ -25,4 +25,5 @@ urlpatterns = [
     path('s3/', include('s3.urls')),
     path('s4/', include('s4.urls')),
     path('blog/', include('blog.urls')),
+    path('__debug__/', include("debug_toolbar.urls")),
 ]
